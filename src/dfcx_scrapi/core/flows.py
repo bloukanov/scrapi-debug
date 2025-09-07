@@ -222,6 +222,8 @@ class Flows(scrapi_base.ScrapiBase):
             request.language_code = self.language_code
 
         client_options = self._set_region(agent_id)
+        print("CREDS:", self.creds)
+        print("CLIENT OPTIONS:", client_options)
         client = services.flows.FlowsClient(
             credentials=self.creds, client_options=client_options
         )
