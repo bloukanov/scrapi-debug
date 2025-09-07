@@ -222,7 +222,7 @@ class Flows(scrapi_base.ScrapiBase):
             request.language_code = self.language_code
 
         client_options = self._set_region(agent_id)
-        print("CREDS INSIDE SCRAPI:", self.creds.get_cred_info())
+        print("CREDS INSIDE SCRAPI:", self.creds.to_json())
         print("CLIENT OPTIONS INSIDE SCRAPI:", client_options)
         client = services.flows.FlowsClient(
             credentials=self.creds, client_options=client_options
