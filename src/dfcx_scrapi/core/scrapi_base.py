@@ -117,6 +117,7 @@ class ScrapiBase:
 
         else:
             self.creds, _ = default()
+            print("INSIDE SCRAPI: USING ADC")
             self.creds.refresh(Request())
             self.token = self.creds.token
             self._check_and_update_scopes(self.creds)
