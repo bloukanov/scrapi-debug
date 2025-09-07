@@ -113,7 +113,7 @@ class NluEvals(scrapi_base.ScrapiBase):
         #     language_code=language_code
         # )
         self._dc = conversation.DialogflowConversation(
-            creds=creds, agent_id=agent_id,
+            creds=creds, creds_path=creds_path, agent_id=agent_id,
             language_code=language_code
         )
         self._dffx = dataframe_functions.DataframeFunctions(creds=self.creds)
